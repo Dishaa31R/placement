@@ -1,3 +1,5 @@
+package Day4;
+
 public class ClimbViaDp{
     public static int dpClimb(int stairs){
         if(stairs<0) return 1;
