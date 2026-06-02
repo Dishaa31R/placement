@@ -1,6 +1,42 @@
 class Patient{
    private String nameno;
    private int age;
+   public String getNameno() {
+    return nameno;
+}
+   public void setNameno(String nameno) {
+    this.nameno = nameno;
+   }
+   public int getAge() {
+    return age;
+   }
+   public void setAge(int age) {
+    this.age = age;
+   }
+   public String getGender() {
+    return gender;
+   }
+   public void setGender(String gender) {
+    this.gender = gender;
+   }
+   public double getWeight() {
+    return weight;
+   }
+   public void setWeight(double weight) {
+    this.weight = weight;
+   }
+   public double getHeight() {
+    return height;
+   }
+   public void setHeight(double height) {
+    this.height = height;
+   }
+   public double getBmi() {
+    return bmi;
+   }
+   public void setBmi(double bmi) {
+    this.bmi = bmi;
+   }
    private String gender;
    private double weight,height,bmi;
    
@@ -14,6 +50,7 @@ public class HealthMetric{
             System.out.println(age+5);
         else
             System.out.println(age);
+            
         }
 
     public static void calculate(double bmi,int age,String gender){
@@ -24,20 +61,20 @@ public class HealthMetric{
               System.out.println((1.20*bmi)+(0.23*age)-5.4);
     }
     public static void calculate(Patient object){
-        System.out.println(object.getname()+"\nBMI");
-        object.Setheight(object.getheight()/=100);
-        object.setbmi()=object.getweight()/(object.getheight()*object.getheight());
-        System.out.println(object.getbmi());
-        calculate(object.getage(),object.getbmi());
-        calculate(object.getbmi(),object.getage(),object.getgender());
+        System.out.println(object.getNameno()+"\nBMI");
+        object.setHeight(object.getHeight()/100);
+        object.setBmi(object.getWeight()/(object.getHeight()*object.getHeight()));
+        System.out.println(object.getBmi());
+        calculate(object.getAge(),object.getBmi());
+        calculate(object.getBmi(),object.getAge(),object.getGender());
     }
     public static void main(String args[]){
         Patient patient1=new Patient();
-        patient1.setname()="Amshi";
-        patient1.setage()=34;
-        patient1.setgender()="female";
-        patient1.setweight()=45;
-        patient1.setheight()=158;
+        patient1.setNameno("Amshi");
+        patient1.setAge(34);
+        patient1.setGender("female");
+        patient1.setWeight(45);
+        patient1.setHeight(158);
         calculate(patient1);
     }
 
